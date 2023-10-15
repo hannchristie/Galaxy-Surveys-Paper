@@ -1,45 +1,4 @@
-Title: A GALEX Ultraviolet Imaging Survey of Galaxies in the Local Volume 
-Authors: Lee J.C., Gil de Paz A., Kennicutt R.C., Bothwell M., Dalcanton J., 
-         Funes J.G., Funes J.G., Johnson B., Sakai S., Skillman E., Tremonti C.,
-         van Zee L. 
-Table: GALEX Observations of Local Volume Galxies
-================================================================================
-Byte-by-byte Description of file: apjs375285t1_mrt.txt
---------------------------------------------------------------------------------
-   Bytes Format Units   Label  Explanations
---------------------------------------------------------------------------------
-   1-  4 I4     ---     Num    Running index number (1)
-   6- 19 A14    ---     Name   Galaxy name
-  21- 22 I2     h       RAh    NED Hour of Right Ascension (J2000)
-  24- 25 I2     min     RAm    NED Minute of Right Ascension (J2000)
-  27- 30 F4.1   s       RAs    NED Second of Right Ascension (J2000)
-      32 A1     ---     DE-    Sign of the Declination (J2000)
-  33- 34 I2     deg     DEd    NED Degree of Declination (J2000)
-  36- 37 I2     arcmin  DEm    NED Arcminute of Declinaiton (J2000)
-  39- 40 I2     arcsec  DEs    NED Arcsecond of Declination (J2000)
-  42- 47 F6.2   deg     GLAT   NED Galactic latitude
-  49- 53 F5.2   Mpc     Dis    Adopted distance; see text
-  55- 61 A7     ---   n_Dis    Determination method for Dis (2)
-  63- 67 F5.2   mag     Bmag   B band magnitude
-  69- 70 I2     ---     Morph  RC3 morphology type
-      72 I1     ---     LVL    Spitzer Local Volume Legacy program; 1=yes, 0=no
-  74- 78 I5     s       tFUV   ? GALEX/FUV cumulative exposure time
-  80- 84 I5     s       tNUV   ? GALEX/NUV cumulative exposure time
-  86-136 A51    ---     TName  GALEX tile name
---------------------------------------------------------------------------------
-Note (1): Galaxies in the composite LVL sample which are not included in 
-          Paper I (generally targets drawn from the ANGST sample) are listed 
-          separately at the end of the table with the "NuM" index number
-          restarting at 1.
-Note (2): 
-    ceph = Cepheid variables;
-    trgb = tip of the red giant branch;
-     sbf = surface brightness fluctuations; 
-     mem = membership in a group with measured distance;
-      bs = brightest blue stars; 
-      tf = Tully-Fisher relation;
-    flow = Local Group corrected recessional velocity distances.
---------------------------------------------------------------------------------
+No.	Galaxy Name	R.A.	Decl.	b	D	Method	B	T	
    1 UGC12894       00 00 22.5  39 29 44 -22.32  8.2  v(flow) 16.6  10 0                                                                 
    2 WLM            00 01 58.1 -15 27 39 -73.63  0.92 trgb    11.03 10 1  1440  1440 NGA_WLM                                             
    3 ESO409-IG015   00 05 31.8 -28 05 53 -79.79 10.4  v(flow) 15.1   6 0  1608  1608 GI1_009016_HPJ0005m28                               
