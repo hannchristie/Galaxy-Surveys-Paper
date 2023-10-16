@@ -3,6 +3,9 @@ import math as m
 import numpy as np
 import csv
 import pandas as pd
+
+import seaborn as sns
+import matplotlib.pyplot as plt
 #%%
 # 11HUGS
 df = pd.read_csv('11HUGS_data.txt',  delimiter = '\t', header = 4, nrows = 1000)
@@ -36,6 +39,7 @@ d_lvhis = df.iloc[:,2]
 # LVL
 df = pd.read_csv('LVL_data.txt',  delimiter = '\t', header = 0, nrows = 1000)
 d_lvl = df.iloc[:,3]
+print(d_lvl)
 
 # PHANGS
 df = pd.read_csv('PHANGS_data.txt',  delimiter = '\t', header = 1, nrows = 1000)
@@ -78,7 +82,9 @@ df = pd.read_csv('GHOSTS_data.txt',  delimiter = '\t', header = 0, nrows = 1000)
 d_ghosts = df.iloc[:,5]
 
 #%%
-
+#CALIFA
+df = pd.read_csv('CALIFA_dist.csv',  delimiter = '\t', header = 0, nrows = 1000)
+d_califa = df.iloc[:,-1]
 #%%
 # create dataframe
 
@@ -89,3 +95,36 @@ data = [d_things, d_11h, d_her, d_lvl, d_angst, d_s4g, d_pings, d_mhon, d_ghosts
 df_p = pd.DataFrame(np.transpose(data), columns=headers)
 
 print(df_p) 
+#%%
+# Create a dictionary with your data
+data_dict = {
+    'THINGS': d_things,
+    '11HUGS': d_11h,
+    'HERACLES': d_her,
+    'LVL': d_lvl,
+    'ANGST': d_angst,
+    'S4G': d_s4g,
+    'PINGS': d_pings,
+    'MHONGOOSE': d_mhon,
+    'GHOSTS': d_ghosts,
+    'GALEX UV Survey': d_galex,
+    'CALIFA': d_califa,
+    'Chandra Survey of Nearby Galaxies': d_chan,
+    'LVHIS': d_lvhis,
+    'JINGLE': d_jingle,
+    'COMING': d_com,
+    'PHANGS': d_phangs,
+    'KNGS': d_kngs
+}
+
+# Create a DataFrame by concatenating data along the columns
+df_p = pd.DataFrame(data_dict)
+#%%
+#make violing plot
+# Create a violin plot
+plt.figure(figsize=(12, 6))
+sns.violinplot(data=df_p, orient="v", palette = 'pastel', saturation = 1, fill = True, linewidth = 0.05, scale = 'width')
+plt.xticks(rotation=90)  # Rotate x-axis labels for better readability
+plt.show()
+
+#%%
