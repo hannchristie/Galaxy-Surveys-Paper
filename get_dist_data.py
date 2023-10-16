@@ -43,7 +43,7 @@ print(d_lvl)
 
 # PHANGS
 df = pd.read_csv('PHANGS_data.txt',  delimiter = '\t', header = 1, nrows = 1000)
-d_phangs = df.iloc[:,3]
+d_phangs = df.iloc[:,]
 
 # PINGS
 df = pd.read_csv('PINGS_data.txt',  delimiter = '\t', header = 1, nrows = 1000)
