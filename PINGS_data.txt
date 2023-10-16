@@ -12,7 +12,6 @@ NGC 6643	SA(rs)c	20.1	3.8 × 1.9	−19.8	0.004 95	1485	60	37	Draco
 NGC 6701	SB(s)a	57.2	1.5 × 1.3	−20.8	0.013 23	3969	32	24	Draco
 NGC 7770	S0	58.7	0.8 × 0.7	−19.4	0.014 14	4242	27	50	Pegasus
 NGC 7771	SB(s)a	60.8	2.5 × 1.0	−20.8	0.014 45	4335	66	68	Pegasus
-Stephan’s Quintet									Pegasus
 NGC 7317	E4	93.3	1.1 × 1.1	−20.3	0.022 01	6603	12	150	Pegasus
 NGC 7318A	E2 pec	93.7	0.9 × 0.9	−20.5	0.022 11	6633	–	–	Pegasus
 NGC 7318B	SB(s)bc pec	82.0	1.9 × 1.2	−20.6	0.019 26	5778	–	–	Pegasus
