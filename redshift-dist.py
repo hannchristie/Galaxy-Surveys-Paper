@@ -46,9 +46,9 @@ for i in range(0, len(z)):
     dist.append(d)
   
 #%%
-print(dist)
+with open('komp_results.csv', 'a') as f:
+    writer = csv.writer(f)
 #%%
-print(min(dist))
 
 
     
