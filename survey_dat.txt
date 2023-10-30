@@ -1,30 +1,28 @@
-Survey	Year	# glx	Wavelength
-THINGS	2008	34	Radio
-MHONGOOSE	2011	30	Radio
-HALOGAS	2011	24	Radio
-LVHIS	2018	82	Radio
-HERACLES	2009	18	mm and sub-mm
-NGLS	2009	155	mm and sub-mm
-JINGLE	2019	193	mm and sub-mm
-COMING	2019	147	mm and sub-mm
-PHANGS-ALMA	2022	90	mm and sub-mm
-LVL	2009	258	IR
-S4G	2010	2331	IR
-PHANGS-JWST	2023	19	IR
-LEGUS IR	2017	50	IR
-11HUGS	2008	261	Optical
-ANGST	2009	69	Optical
-PINGS	2010	17	Optical
-CGS	2011	605	Optical
-GHOSTS	2011	14	Optical
-CALIFA	2015	600	Optical
-SIGNALS	2021	54	Optical
-KNGS	2022	13	Optical
-PHANGS-HST	2022	38	Optical
-PHANGS-Halpha	2023	90	Optical
-PHANGS-MUSE	2023	19	Optical
-LEGUS O	2017	50	Optical
-GALEX UV Imaging Survey	2014	390	UV
-LEGUS	2017	50	UV
-HRS	2010	323	X ray
-CHNGS	2018	719	X ray
+Survey Name	Year	# glx	Max D 	Wavelength	Im/Spec?
+THINGS	2008	34	15	Radio	Imaging
+MHONGOOSE	2011	30	30	Radio	Spec
+HALOGAS	2011	24	24	Radio	Imaging
+LVHIS	2018	82	10	Radio	Spec
+HERACLES	2009	18	14	mm and sub-mm	Spec
+NGLS	2009	155	25	mm and sub-mm	Spec
+JINGLE	2018	193	222	mm and sub-mm	Spec
+COMING	2019	147	60	mm and sub-mm	Spec
+PHANGS-ALMA	2021	90	20	mm and sub-mm	Imaging
+LVL	2009	258	11	IR	Imaging
+S4G	2010	2331	40	IR	Imaging
+PHANGS-JWST	2023	19	20	IR	Imaging
+11HUGS	2008	261	11	Optical	Imaging
+ANGST	2009	69	4	Optical	Imaging
+PINGS	2010	17	100	Optical	Spec
+CGS	2011	605	100	Optical	Both
+GHOSTS	2011	14	17	Optical	Imaging
+CALIFA	2014	600	132	Optical	Spec
+SIGNALS	2019	54	10	Optical	Spec
+KMTNet	2022	13	50	Optical	Imaging
+PHANGS-HST	2022	38	20	Optical	Imaging
+PHANGS-Halpha	2022	90	20	Optical	Imaging
+PHANGS-MUSE	2023	19	20	Optical	Spec
+GALEX UV Imaging Survey	2011	390	11	UV	Imaging
+LEGUS	2015	50	12	UV	Imaging
+HRS	2010	323	25	X ray	Imaging
+CNGS	2017	719	50	X ray	Imaging

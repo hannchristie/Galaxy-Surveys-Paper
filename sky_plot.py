@@ -8,89 +8,33 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from astropy.io import ascii
-# %%
-# 11HUGS
-df = pd.read_csv('11HUGS_data.txt',  delimiter='\t', header=4, nrows=1000)
-d_11h = df.iloc[:, -1]
+from astropy.coordinates import SkyCoord
+import astropy.units as u
 
-# ANGST
-df = pd.read_csv('ANGST_data.txt',  delimiter='\t', header=2, nrows=1000)
-d_angst = df.iloc[:, 2]
+#%%
+df = pd.read_csv('AllSkyLoc.csv')
 
-# COMING
-df = pd.read_csv('COMING_data.txt',  delimiter='\t', header=2, nrows=1000)
-d_com = df.iloc[:, -1]
+def convert_to_skycoord(row):
+    if row['Type'] == 'hms':
+        coord_str = f"{row['RA']} {row['Dec']}"
+        coord = SkyCoord(coord_str, unit=(u.hourangle, u.deg))
+    else:
+        coord = SkyCoord(row['RA'], row['Dec'], unit=(u.deg, u.deg))
+    return coord
 
-# Chandra
-df = pd.read_csv('Chandra_data.txt', delimiter='\t', header=3 , nrows=1000)
-d_chan = df.iloc[:, 2]
-
-# GALEX UV
-df = pd.read_csv('GALEX_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_galex = df.iloc[:, 2]
-
-# JINGLE
-df = pd.read_csv('JINGLE_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_jingle = df.iloc[:, -1]
-
-#LEGUS
-df = pd.read_csv('LEGUS_data.txt',  delimiter='\t', header=1, nrows=1000)
-d_lvhis = df.iloc[:, -1]
-
-# LVHIS
-df = pd.read_csv('LVHIS_data.txt',  delimiter='\t', header=1, nrows=1000)
-d_lvhis = df.iloc[:, 2]
-
-# LVL
-df = pd.read_csv('LVL_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_lvl = df.iloc[:, 4]
+df['SkyCoord'] = df.apply(convert_to_skycoord, axis=1)
 
 
-# PHANGS
-df = pd.read_csv('PHANGS_data.txt',  delimiter='\t', header=1, nrows=1000)
-d_phangs = df.iloc[:,]
+#%%
+# Create a projection plot
+fig, ax = plt.subplots(subplot_kw={'projection': 'mollweide'})
 
-# PINGS
-df = pd.read_csv('PINGS_data.txt',  delimiter='\t', header=1, nrows=1000)
-d_pings = df.iloc[:, 2]
+# Plot points
+ax.scatter(df['SkyCoord'].ra.wrap_at(180 * u.deg), df['SkyCoord'].dec, s=10, label='Astronomical Coordinates')
 
-# S4G
-df = pd.read_csv('S4G_data.txt',  delimiter='\t', header=2, nrows=1000)
-d_s4g = df.iloc[:, -1]
+# Customize the plot as needed
+ax.set_title('Projection of Astronomical Coordinates (Equatorial ICRS)')
+ax.grid()
 
-# THINGS
-df = pd.read_csv('THINGS_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_things = df.iloc[:, 4]
-
-# HERACLES
-df = pd.read_csv('heracles_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_her = df.iloc[:, -1]
-
-# MHONGOOSE
-df = pd.read_csv('mhongoose_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_mhon = df.iloc[:, -2]
-
-# KNGS
-df = pd.read_csv('KNGS_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_kngs = df.iloc[:, 3]
-
-# CGS
-df = pd.read_csv('CGS_data.txt',  delimiter = '\t', header = 0, nrows = 1000)
-d_cgs = df.iloc[:,-1]
-
-# LEGUS
-df = pd.read_csv('LEGUS_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_legus = df.iloc[:, 5]
-
-# GHOSTS
-df = pd.read_csv('GHOSTS_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_ghosts = df.iloc[:, 5]
-
-#HALOGAS
-df = pd.read_csv('halogas_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_ghosts = df.iloc[:, 3]
-
-# CALIFA
-df = pd.read_csv('CALIFA_dist.csv',  delimiter='\t', header=0, nrows=1000)
-d_califa = df.iloc[:, -1]
+plt.legend()
+plt.show()
