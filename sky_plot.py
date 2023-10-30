@@ -12,18 +12,26 @@ from astropy.coordinates import SkyCoord
 import astropy.units as u
 
 #%%
-df = pd.read_csv('AllSkyLoc.csv')
+df = pd.read_csv('AllSkyLoc1.csv')
 
-def convert_to_skycoord(row):
-    if row['Type'] == 'hms':
-        coord_str = f"{row['RA']} {row['Dec']}"
-        coord = SkyCoord(coord_str, unit=(u.hourangle, u.deg))
-    else:
-        coord = SkyCoord(row['RA'], row['Dec'], unit=(u.deg, u.deg))
-    return coord
+# Create a list to store valid SkyCoord objects
+valid_coords = []
 
-df['SkyCoord'] = df.apply(convert_to_skycoord, axis=1)
+# Convert the coordinates to SkyCoord objects with error handling
+for index, row in df.iterrows():
+    try:
+        if row['Type'] == 'hms':
+            coord_str = f"{row['RA']} {row['Dec']}"
+            coord = SkyCoord(coord_str,  unit=(u.hourangle, u.deg))
+        else:
+            coord = SkyCoord(row['RA'], row['Dec'], unit=(u.deg, u.deg))
+        valid_coords.append(coord)
+    except Exception as e:
+        print(f"Error parsing coordinates at index {index}: {str(e)}")
+        continue
 
+# Create a 'SkyCoord' column in the DataFrame
+df['SkyCoord'] = valid_coords
 
 #%%
 # Create a projection plot
