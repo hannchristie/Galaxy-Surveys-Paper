@@ -8,7 +8,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from astropy.coordinates import SkyCoord
+from astropy.coordinates import SkyCoord, Galactic
+from astropy.visualization.wcsaxes import SphericalCircle
 import astropy.units as u
 
 #%%
@@ -30,19 +31,47 @@ for index, row in df.iterrows():
         print(f"Error parsing coordinates at index {index}: {str(e)}")
         continue
 
+#valid_coords.galactic
 # Create a 'SkyCoord' column in the DataFrame
 df['SkyCoord'] = valid_coords
 
 #%%
 # Create a projection plot
-fig, ax = plt.subplots(subplot_kw={'projection': 'mollweide'})
+fig, ax = plt.subplots(figsize = (8,10), subplot_kw={'projection': 'aitoff'})
 
-# Plot points
-ax.scatter(df['SkyCoord'].ra.wrap_at(180 * u.deg), df['SkyCoord'].dec, s=10, label='Astronomical Coordinates')
+# Extract RA and Dec from the SkyCoord objects in the DataFrame
+ra = [coord.ra.wrap_at(180 * u.deg) for coord in df['SkyCoord']]
+dec = [coord.dec for coord in df['SkyCoord']]
+
+
+ra_vals = []
+dec_vals = []
+
+for i in range(0, len(ra)):
+    ra_vals.append(ra[i].value)
+    dec_vals.append(dec[i].value)
+# Plot the points
+ax.scatter(ra_vals, dec_vals, s=10, label='Astronomical Coordinates', alpha = 0.5)
+
+# Define the galactic coordinates for the galactic plane
+l_value = np.linspace(-180,180, 100) * u.deg  # Adjust as needed
+b_value = [0]*100*u.deg  # Create a list of 100 zeros
+
+# Convert galactic coordinates to equatorial coordinates
+gal_plane = SkyCoord(l=l_value, b=b_value, frame=Galactic)
+
+# Get the corresponding equatorial coordinates
+gal_ra = gal_plane.icrs.ra
+gal_dec = gal_plane.icrs.dec
+
+# Plot the galactic plane
+plt.plot(gal_ra.radian, gal_dec.radian, linestyle='-', color='b')
+
 
 # Customize the plot as needed
-ax.set_title('Projection of Astronomical Coordinates (Equatorial ICRS)')
+ax.set_title('Survey Coverage')
+ax.set_xticklabels(['14h','16h','18h','20h','22h','0h','2h','4h','6h','8h','10h'])
 ax.grid()
-
-plt.legend()
 plt.show()
+
+plt.savefig('skyPlot.png', bbox_inches = 'tight', dpi = 200)
