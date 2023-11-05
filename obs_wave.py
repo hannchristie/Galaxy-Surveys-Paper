@@ -7,10 +7,11 @@ import numpy as np
 
 
 # Import your data
-df = pd.read_csv('survey_dat.txt', delimiter='\t', header=0, nrows=30)
+df = pd.read_csv('survey_dat.txt', delimiter='\t', header=0, nrows=50)
 
 surveys = df.iloc[:, 0]
 year = df.iloc[:, 1]
+print(year)
 wave = df.iloc[:, -2]
 s_type = df.iloc[:, -1]
 
@@ -26,7 +27,7 @@ wave_mapping = {band: i for i, band in enumerate(wavelength_bands)}
 fig, ax = plt.subplots()
 
 # Define a color map based on unique 'Wavelength' values
-color_map = plt.cm.get_cmap('Spectral', len(wavelength_bands))
+color_map = plt.cm.get_cmap('Spectral', len(wavelength_bands)+2)
 
 
 # Iterate through the data and plot points with labels
@@ -42,6 +43,7 @@ for i in range(len(surveys)):
 
     color = color_map(x / len(wavelength_bands))  # Assign a unique color based on the 'Wavelength' label
     ax.scatter(x, y, s=80, marker= 'o', color=color, zorder=1)
+    ax.scatter(x,y, s=85,  marker = 'o', facecolors='none', edgecolors='black', alpha = 0.75)
 
     if survey_type == 'Imaging':
         marker_style = 'o'  # Circle marker for 'imaging'
@@ -56,7 +58,7 @@ for i in range(len(surveys)):
         marker_style = '*'  # Star marker for 'both'
         size = 25
         label = 'both'
-    ax.scatter(x, y, s=size, label=label, marker=marker_style, color='black', zorder=2, alpha = 0.5)
+    #ax.scatter(x, y, s=size, label=label, marker=marker_style, color='black', zorder=2, alpha = 0.5)
 
     survey_name = surveys[i]
     survey_year = year[i]
@@ -68,7 +70,7 @@ for i in range(len(surveys)):
 
     color = color_map(x / len(wavelength_bands))  # Assign a unique color based on the 'Wavelength' label
     
-    ax.scatter(x, y, s=50, label=label, marker=marker_style, color=color)
+    #ax.scatter(x, y, s=50, label=label, marker=marker_style, color=color)
 
 # Set labels and ticks
 ax.set_xticks(range(len(wavelength_bands)))
@@ -82,11 +84,11 @@ ax.grid(True, alpha=0.5)
 label_handles = ['Imaging', 'Spec', 'Both']
 #legend = ax.legend(loc='upper left', bbox_to_anchor=(1, 1), title='Types of Surveys', fontsize=8)
 #legend.set_bbox_to_anchor((1.01, 0.8))
-plt.legend()
+#plt.legend()
 
 plt.tight_layout()
-plt.show()
-#plt.savefig('obs_bands.png', dpi = 200)
+#plt.show()
+plt.savefig('obs_bands.png', dpi = 200)
 
 #%%
 min_num = min(num_G)

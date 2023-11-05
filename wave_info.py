@@ -31,7 +31,7 @@ fig, ax = plt.subplots()
 
 #Get a colormap and create a cycle of distinct colors based on the number of data points
 # Get a cycle of custom colors
-colors = iter(custom_colors)
+colors = iter(custom_color_list)
 
 
 # Iterate through the data and plot points with labels
@@ -60,7 +60,7 @@ ax.set_title('Observed Wavelenth Bands')
 ax.grid(True)
 
 # Add a legend
-ax.legend(loc= [1, 0], title='Surveys', fontsize = 8)
+#ax.legend(loc= [1, 0], title='Surveys', fontsize = 8)
 
 plt.tight_layout()
 plt.show()

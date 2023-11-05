@@ -1,0 +1,33 @@
+Survey Name	Year	# glx	Max D 	Wavelength	Im/Spec?
+FIGGS	2008	65	10	Radio	Imaging
+THINGS	2008	34	15	Radio	Imaging
+11HUGS	2008	261	11	Optical	Imaging
+HERACLES	2009	18	14	mm and sub-mm	Spec
+NGLS	2009	155	25	mm and sub-mm	Spec
+LVL	2009	258	11	IR	Imaging
+ANGST	2009	69	4	Optical	Imaging
+HRS	2010	323	25	IR	Imaging
+S4G	2010	2331	40	IR	Imaging
+PINGS	2010	17	100	Optical	Spec
+HALOGAS	2011	24	24	Radio	Imaging
+KINGFISH	2011	61	30	IR	Both
+CGS	2011	605	100	Optical	Both
+GHOSTS	2011	14	17	Optical	Imaging
+GALEX UVIS	2011	390	11	UV	Imaging
+LITTLE THINGS	2012	41	10	Radio	Spec
+VLA-ANGST	2012	35	4	Radio	Imaging
+DGS	2013	63	191	IR	Spec
+CALIFA	2014	600	132	Optical	Spec
+LEGUS	2015	50	12	UV, Optical, IR	Imaging
+MHONGOOSE	2016	30	30	Radio	Spec
+CNGS	2017	719	50	X ray	Imaging
+LVHIS	2018	82	10	Radio	Spec
+JINGLE	2018	193	222	mm and sub-mm	Spec
+COMING	2019	147	60	mm and sub-mm	Spec
+SIGNALS	2019	54	10	Optical	Spec
+PHANGS-ALMA	2021	90	20	mm and sub-mm	Imaging
+KMTNet	2022	13	50	Optical	Imaging
+PHANGS-HST	2022	38	20	Optical	Imaging
+PHANGS-Halpha	2022	90	20	Optical	Imaging
+PHANGS-JWST	2023	19	20	IR	Imaging
+PHANGS-MUSE	2023	19	20	Optical	Spec
