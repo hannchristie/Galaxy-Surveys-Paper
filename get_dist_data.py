@@ -81,7 +81,7 @@ d_cgs = df.iloc[:,-1]
 
 # LEGUS
 df = pd.read_csv('LEGUS_data.txt',  delimiter='\t', header=0, nrows=1000)
-d_legus = df.iloc[:, 5]
+d_legus = df.iloc[:, -1]
 
 # GHOSTS
 df = pd.read_csv('GHOSTS_data.txt',  delimiter='\t', header=0, nrows=1000)

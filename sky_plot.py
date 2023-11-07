@@ -51,28 +51,14 @@ for i in range(0, len(ra)):
     ra_vals.append(ra[i].value)
     dec_vals.append(dec[i].value)
 # Plot the points
-ax.scatter(ra_vals, dec_vals, s=10, label='Astronomical Coordinates', alpha = 0.5)
-
-
-# Define the galactic coordinates for the galactic plane
-l_value = np.linspace(0, 360-0.01, 100)
-b_value = [0] * 100 
-
-
-
-# Convert galactic coordinates to equatorial coordinates
-gal_plane = SkyCoord(l=l_value, b=b_value, frame=Galactic, unit = 'deg').icrs
-
-# Get the corresponding equatorial coordinates
+ax.scatter(ra_vals, dec_vals, s=10, label='Astronomical Coordinates', alpha = 0.45, color = 'cadetblue')
 
 
 #gal_ra = gal_ra*u.deg
 #gal_dec = gal_dec*u.deg
 
-print(gal_plane[0])
-
 # Plot the galactic plane
-plt.plot(gal_plane.ra*u.rad, gal_plane.dec*u.rad, linestyle='-', color='b')
+#plt.plot(gal_plane.ra*u.rad, gal_plane.dec*u.rad, linestyle='-', color='b')
 
 
 
@@ -80,7 +66,10 @@ plt.plot(gal_plane.ra*u.rad, gal_plane.dec*u.rad, linestyle='-', color='b')
 ax.set_title('Survey Coverage')
 ax.set_xticklabels(['14h','16h','18h','20h','22h','0h','2h','4h','6h','8h','10h'])
 ax.grid()
+# Remove the top and right spines
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
 
-plt.show()
+#plt.show()
 
-#plt.savefig('skyPlot.png', bbox_inches = 'tight', dpi = 200)
+plt.savefig('skyPlot.png', bbox_inches = 'tight', dpi = 500)

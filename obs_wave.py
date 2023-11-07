@@ -88,7 +88,7 @@ label_handles = ['Imaging', 'Spec', 'Both']
 
 plt.tight_layout()
 #plt.show()
-plt.savefig('obs_bands.png', dpi = 200)
+plt.savefig('obs_bands.png', dpi = 500)
 
 #%%
 min_num = min(num_G)

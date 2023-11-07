@@ -16,7 +16,7 @@ year = df.iloc[:, 1]
 
 num_G = df.iloc[:, 2]
 
-max_D = df.iloc[:, -2]
+max_D = df.iloc[:, 3]
 print(max_D)
 
 #%%
@@ -35,21 +35,22 @@ plt.plot(x_dat, a*x_dat+b)
 plt.ylabel('log(# galaxies)')
 plt.xlabel('Surveys')
 #plt.show()
-plt.savefig('num_glx.png', bbox_inches = 'tight', dpi = 200)
+plt.savefig('num_glx.png', bbox_inches = 'tight', dpi = 500)
 
 #%%
 
 x_dat = np.linspace(0, len(max_D), len(max_D))
 plt.scatter(surveys,max_D, label = 'Distance')
 plt.xticks(rotation=90)  # Rotate x-axis labels for better readability
-sns.regplot(x = x_dat, y = max_D, scatter= False, fit_reg = True)
+a, b = np.polyfit(x_dat, max_D, 1)
+plt.plot(x_dat, a*x_dat+b)
 plt.ylabel('Maximum Distance (Mpc)')
 plt.xlabel('Surveys')
 plt.yscale('log')
 #plt.ylim(0, max(num_G))
 #plt.legend()
-plt.show()
-#plt.savefig('both.png', bbox_inches = 'tight', dpi = 200)
+#plt.show()
+plt.savefig('maxD.png', bbox_inches = 'tight', dpi = 500)
 
 #%%
 min_num = min(max_D)
