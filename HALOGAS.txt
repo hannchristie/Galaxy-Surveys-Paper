@@ -1,5 +1,4 @@
- 	 	 	d T88	d best	d best	v sys	i	D 25	M B	v rot	SFR	SFR
-UGC	Other IDs	Type	(Mpc)	(Mpc)	method	(km s-1)	(°)	(arcmin)	(mag)	(km s-1)	(M⊙ yr-1)	Refs.
+UGC	Other IDs	Type d_T88	d_best	d_best	v_sys	i	D_25	M_B	v_rot	SFR	SFR
 1256	NGC 0672	SBcd	7.5	7.6	2	425	70	6.4	–18.65	130.7	0.22	H1, I2
 1831	NGC 0891	SAb	9.6	9.2	1	529	84	12.2	–19.96	212.2	2.4	H1, I4
 1913	NGC 0925	SABd	9.4	9.1	1	554	54	11.3	–19.66	102.4	0.83	H1, I4
