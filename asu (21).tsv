@@ -1,0 +1,192 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2024-01-24T17:08:01 [V7.32.7]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	protocol=ASU	
+#INFO	request_date=2024-01-24T17:08:01	
+#INFO	request_post=https://vizier.cds.unistra.fr//viz-bin/asu-tsv	
+#-oc.form=dec
+#-out.max=unlimited
+#-nav=cat:J/ApJ/795/158&tab:{J/ApJ/795/158/table3}&key:source=J/ApJ/795/158&HTTPPRM:&
+#-c.eq=J2000
+#-c.r=  2
+#-c.u=arcmin
+#-c.geom=r
+#-source=J/ApJ/795/158/table3
+#-order=I
+#-out=Name
+#-out=n_Name
+#-out=RAJ2000
+#-out=DEJ2000
+#-out=Dist
+#-out=Kmag
+#-out=AV
+#-out=KMag
+#-out=sigmaHL
+#-out=sigmaNSA
+#-out=Rad
+#-out=RadNSA
+#-out=Env
+#-out=n_Env
+#-out=Com
+#-out=Simbad
+#Simbad=Simbad
+#
+#INFO	contact=cds-question@unistra.fr	
+#INFO	version=7.32.7	
+#INFO	-out.max=unlimited	
+
+#RESOURCE=yCat_17950158
+#Name: J/ApJ/795/158
+#Title: The MASSIVE survey : 116 candidate galaxies (Ma+, 2014)
+#INFO	ivoid=ivo://cds.vizier/j/apj/795/158	
+#INFO	publisher=CDS	
+#INFO	creator=Ma C.-P.	
+#INFO	related_resource=bibcode:2014ApJ...795..158M	
+#INFO	landing_page=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/795/158	
+#INFO	publication_id=doi:10.26093/cds/vizier.17950158	
+#INFO	publication_date=2017-07-18	
+#INFO	curation_level=RESEARCH	
+#INFO	rights=https://cds.unistra.fr/vizier-org/licences_vizier.html	
+#Table	J_ApJ_795_158_table3:
+#Name: J/ApJ/795/158/table3
+#Title: 116 Candidate MASSIVE Galaxies
+#Column	Name	(A10)	Galaxy name	[ucd=meta.id;meta.main]
+#Column	n_Name	(A1)	[a] Note on Name (1)	[ucd=meta.note]
+#Column	RAJ2000	(F8.4)	Right Ascension in decimal degrees (J2000)	[ucd=pos.eq.ra;meta.main]
+#Column	DEJ2000	(F8.4)	Declination in decimal degrees (J2000)	[ucd=pos.eq.dec;meta.main]
+#Column	Dist	(F5.1)	Distance	[ucd=pos.distance]
+#Column	Kmag	(F5.2)	? Apparent K-band magnitude from 2MASS XSC	[ucd=phot.mag;em.IR.K]
+#Column	AV	(F6.3)	Foreground galactic extinction in Landolt V band (Schlafly & Finkbeiner 2011ApJ...737..103S) with reddening relation of Fitzpatrick (1999PASP..111...63F)	[ucd=phys.absorption;em.opt.V]
+#Column	KMag	(F6.2)	? Extinction-corrected "total" absolute K-band magnitude (3)	[ucd=phys.magAbs;em.IR.K]
+#Column	sigmaHL	(I3)	? Central stellar velocity dispersion from HyperLeda	[ucd=phys.veloc.dispersion]
+#Column	sigmaNSA	(I3)	? Central stellar velocity dispersion from the NASA-Sloan Atlas	[ucd=phys.veloc.dispersion]
+#Column	Rad	(F4.1)	? Effective radius from 2MASS (4)	[ucd=phys.angSize;src]
+#Column	RadNSA	(F4.1)	? Optical half-light radius from the NASA-Sloan Atlas	[ucd=phys.angSize;src]
+#Column	Env	(I3)	Galaxy environment (5)	[ucd=meta.number]
+#Column	n_Env	(A1)	[B] Note on Env (6)	[ucd=meta.note]
+#Column	Com	(a12)	Additional comments (e.g., alternative names, associated clusters)	[ucd=meta.note]
+#Column	Simbad	(a6)	Simbad column added by the CDS	[ucd=meta.ref.url]
+Name	n_Name	RAJ2000	DEJ2000	Dist	Kmag	AV	KMag	sigmaHL	sigmaNSA	Rad	RadNSA	Env	n_Env	Com	Simbad
+ 	 	deg	deg	Mpc	mag	mag	mag	km/s	km/s	arcsec	arcsec	 	 	 	
+----------	-	--------	--------	-----	-----	------	------	---	---	----	----	---	-	------------	------
+NGC 0057  	 	003.8787	+17.3284	 76.3	 8.68	 0.212	-25.75	326	   	13.2	27.0	  1	 	            	Simbad
+NGC 0080  	 	005.2952	+22.3572	 81.9	 8.92	 0.168	-25.66	260	   	15.7	32.2	 14	B	            	Simbad
+NGC 0128  	 	007.3128	+02.8641	 59.3	 8.52	 0.079	-25.35	215	   	10.5	18.0	  1	 	            	Simbad
+NGC 0227  	 	010.6534	-01.5288	 75.9	 9.09	 0.084	-25.32	262	   	 8.7	27.2	  4	B	            	Simbad
+NGC 0315  	 	014.4538	+30.3524	 70.3	 7.96	 0.177	-26.30	296	   	20.0	25.1	  6	B	            	Simbad
+NGC 0383  	 	016.8540	+32.4126	 71.3	 8.48	 0.194	-25.81	279	   	15.5	20.5	 29	 	=4ZW038     	Simbad
+NGC 0393  	 	017.1540	+39.6443	 85.7	 9.23	 0.120	-25.44	233	   	11.0	    	  1	 	            	Simbad
+NGC 0410  	 	017.7453	+33.1520	 71.3	 8.38	 0.161	-25.90	298	   	16.8	31.6	 29	B	            	Simbad
+NGC 0467  	 	019.7922	+03.3008	 75.8	 9.01	 0.092	-25.40	247	   	14.5	21.5	  1	 	            	Simbad
+PGC 004829	 	020.1287	+50.1445	 99.0	 9.74	 0.554	-25.30	   	   	 7.3	    	  1	 	            	Simbad
+NGC 0499  	 	020.7978	+33.4601	 69.8	 8.74	 0.193	-25.50	266	   	11.6	15.6	 35	 	            	Simbad
+NGC 0507  	 	020.9164	+33.2561	 69.8	 8.30	 0.170	-25.93	295	   	23.0	38.4	 35	B	            	Simbad
+NGC 0533  	 	021.3808	+01.7590	 77.9	 8.42	 0.084	-26.05	279	   	21.9	40.7	  3	B	            	Simbad
+NGC 0545  	a	021.4963	-01.3402	 74.0	     	 0.114	      	250	   	    	    	 32	B	A194        	Simbad
+NGC 0547  	 	021.5024	-01.3451	 74.0	 8.49	 0.113	-25.83	262	   	25.1	19.7	 32	 	A194        	Simbad
+NGC 0665  	 	026.2338	+10.4230	 74.6	 8.88	 0.242	-25.51	190	   	11.5	13.7	  4	B	            	Simbad
+UGC 01332 	 	028.0755	+48.0878	 99.2	 9.48	 0.557	-25.57	   	   	12.9	    	  8	B	            	Simbad
+NGC 0708  	 	028.1937	+36.1518	 69.0	 8.57	 0.247	-25.65	230	   	23.7	    	 39	B	A262        	Simbad
+UGC 01389 	 	028.8778	+47.9550	 99.2	 9.63	 0.519	-25.41	   	   	 9.2	    	  8	 	            	Simbad
+NGC 0741  	 	029.0874	+05.6289	 73.9	 8.30	 0.144	-26.06	291	   	19.5	26.9	  5	B	            	Simbad
+NGC 0777  	 	030.0622	+31.4294	 72.2	 8.37	 0.128	-25.94	318	   	14.6	18.6	  7	B	            	Simbad
+NGC 0890  	 	035.5042	+33.2661	 55.6	 8.25	 0.212	-25.50	212	   	16.7	    	  1	 	            	Simbad
+NGC 0910  	 	036.3616	+41.8243	 79.8	 9.20	 0.157	-25.33	249	   	13.6	    	 29	 	A347        	Simbad
+NGC 0997  	 	039.3103	+07.3056	 90.4	 9.42	 0.380	-25.40	   	   	 9.6	23.5	  3	B	            	Simbad
+NGC 1016  	 	039.5815	+02.1193	 95.2	 8.58	 0.085	-26.33	302	   	18.1	26.8	  8	B	            	Simbad
+NGC 1060  	 	040.8127	+32.4250	 67.4	 8.20	 0.532	-26.00	303	   	16.8	36.9	 12	B	            	Simbad
+NGC 1066  	 	040.9579	+32.4749	 67.4	 8.89	 0.563	-25.31	   	   	17.5	26.6	 12	 	            	Simbad
+NGC 1132  	 	043.2159	-01.2747	 97.6	 9.26	 0.176	-25.70	246	   	16.1	30.9	  3	B	            	Simbad
+NGC 1129  	 	043.6141	+41.5796	 73.9	 8.24	 0.309	-26.14	330	   	26.4	30.2	 33	B	            	Simbad
+NGC 1167  	 	045.4265	+35.2056	 70.2	 8.64	 0.496	-25.64	204	   	20.7	29.7	  3	B	            	Simbad
+NGC 1226  	 	047.7723	+35.3868	 85.7	 9.21	 0.526	-25.51	271	   	12.5	    	  3	B	            	Simbad
+IC 0310   	 	049.1792	+41.3248	 77.5	 9.15	 0.445	-25.35	230	239	11.8	15.3	117	 	Perseus/A426	Simbad
+NGC 1272  	 	049.8387	+41.4906	 77.5	 8.69	 0.441	-25.80	292	   	20.7	31.5	117	 	Perseus/A426	Simbad
+UGC 02783 	 	053.5766	+39.3568	 85.8	 9.27	 0.447	-25.44	299	   	 8.4	 9.0	  4	B	            	Simbad
+NGC 1453  	 	056.6136	-03.9688	 56.4	 8.12	 0.289	-25.67	328	   	16.0	    	 12	B	            	Simbad
+NGC 1497  	 	060.5283	+23.1329	 87.8	 9.48	 0.602	-25.31	249	   	10.3	    	  1	 	            	Simbad
+NGC 1600  	 	067.9161	-05.0861	 63.8	 8.04	 0.118	-25.99	334	   	20.8	    	 16	B	            	Simbad
+NGC 1573  	 	068.7666	+73.2624	 65.0	 8.56	 0.377	-25.55	303	   	13.9	    	 15	B	            	Simbad
+NGC 1684  	 	073.1298	-03.1061	 63.5	 8.69	 0.159	-25.34	306	   	15.8	    	 11	B	            	Simbad
+NGC 1700  	 	074.2347	-04.8658	 54.4	 8.09	 0.119	-25.60	239	   	13.4	    	  4	B	            	Simbad
+NGC 2208  	 	095.6444	+51.9095	 84.1	 9.04	 0.408	-25.63	225	   	14.2	    	  1	 	            	Simbad
+NGC 2256  	 	101.8082	+74.2365	 79.4	 8.67	 0.359	-25.87	221	   	20.9	    	 10	B	            	Simbad
+NGC 2274  	 	101.8224	+33.5672	 73.8	 8.68	 0.286	-25.69	295	   	15.0	    	  6	B	            	Simbad
+NGC 2258  	 	101.9425	+74.4818	 59.0	 8.23	 0.351	-25.66	287	   	18.6	    	  3	B	            	Simbad
+NGC 2320  	 	106.4251	+50.5811	 89.4	 8.85	 0.189	-25.93	315	   	10.6	    	 18	B	            	Simbad
+UGC 03683 	 	107.0582	+46.1159	 85.1	 9.16	 0.253	-25.52	291	   	11.2	    	  4	B	            	Simbad
+NGC 2332  	 	107.3924	+50.1823	 89.4	 9.40	 0.241	-25.39	232	   	 8.9	    	 18	 	            	Simbad
+NGC 2340  	 	107.7950	+50.1747	 89.4	 8.88	 0.203	-25.90	246	   	19.7	    	 18	 	            	Simbad
+UGC 03894 	 	113.2695	+65.0791	 97.2	 9.37	 0.175	-25.58	304	   	12.2	17.8	  4	B	            	Simbad
+NGC 2418  	 	114.1563	+17.8839	 74.1	 8.95	 0.102	-25.42	247	   	11.7	16.2	  1	 	            	Simbad
+NGC 2456  	 	118.5444	+55.4953	107.3	 9.83	 0.106	-25.33	214	   	10.9	    	  1	 	            	Simbad
+NGC 2492  	 	119.8738	+27.0264	 97.8	 9.60	 0.109	-25.36	243	273	 8.7	12.6	  3	B	            	Simbad
+NGC 2513  	 	120.6028	+09.4136	 70.8	 8.74	 0.063	-25.52	274	   	13.9	24.0	  4	B	            	Simbad
+NGC 2672  	 	132.3412	+19.0750	 61.5	 8.35	 0.058	-25.60	268	   	16.9	14.3	  3	B	            	Simbad
+NGC 2693  	 	134.2469	+51.3474	 74.4	 8.60	 0.054	-25.76	349	   	13.7	15.4	  1	 	            	Simbad
+NGC 2783  	 	138.4145	+29.9929	101.4	 9.32	 0.082	-25.72	301	254	11.8	38.2	  3	B	            	Simbad
+NGC 2832  	 	139.9453	+33.7498	105.2	 8.70	 0.047	-26.42	332	   	18.2	21.2	  4	B	A779        	Simbad
+NGC 2892  	 	143.2205	+67.6174	101.1	 9.35	 0.233	-25.70	304	   	12.5	23.3	  1	 	            	Simbad
+NGC 2918  	 	143.9334	+31.7054	102.3	 9.57	 0.053	-25.49	258	223	 8.8	18.9	  1	 	            	Simbad
+NGC 3158  	 	153.4605	+38.7649	103.4	 8.80	 0.036	-26.28	343	300	14.2	16.1	  6	B	            	Simbad
+NGC 3209  	 	155.1601	+25.5050	 94.6	 9.34	 0.060	-25.55	303	   	 9.0	29.4	  3	B	            	Simbad
+NGC 3332  	 	160.1182	+09.1825	 89.1	 9.37	 0.087	-25.38	221	220	12.5	23.7	  1	 	            	Simbad
+NGC 3343  	 	161.5432	+73.3531	 93.8	 9.57	 0.331	-25.33	   	   	10.6	    	  1	 	            	Simbad
+NGC 3462  	 	163.8378	+07.6967	 99.2	 9.37	 0.081	-25.62	218	   	10.1	20.1	  1	 	            	Simbad
+NGC 3562  	 	168.2445	+72.8793	101.0	 9.38	 0.111	-25.65	264	   	 8.6	    	  3	B	            	Simbad
+NGC 3615  	 	169.5277	+23.3973	101.2	 9.45	 0.049	-25.58	259	271	 8.2	20.2	  3	B	            	Simbad
+NGC 3805  	 	175.1736	+20.3430	 99.4	 9.30	 0.064	-25.69	293	295	 8.3	16.5	 42	 	            	Simbad
+NGC 3816  	 	175.4502	+20.1036	 99.4	 9.60	 0.052	-25.40	   	207	10.7	32.9	 42	 	            	Simbad
+NGC 3842  	 	176.0090	+19.9498	 99.4	 9.08	 0.059	-25.91	315	291	14.1	24.2	 42	B	A1367       	Simbad
+NGC 3862  	 	176.2708	+19.6063	 99.4	 9.49	 0.064	-25.50	271	260	11.1	40.0	 42	 	            	Simbad
+NGC 3937  	 	178.1776	+20.6313	101.2	 9.42	 0.117	-25.62	309	289	10.7	34.7	 10	B	            	Simbad
+NGC 4055  	 	181.0059	+20.2323	107.2	 9.76	 0.095	-25.40	   	270	 8.1	17.5	 18	 	=NGC 4061   	Simbad
+NGC 4065  	 	181.0257	+20.2351	107.2	 9.69	 0.098	-25.47	272	283	 8.8	31.0	 18	B	            	Simbad
+NGC 4066  	 	181.0392	+20.3479	107.2	 9.81	 0.086	-25.35	   	253	10.0	37.0	 18	 	            	Simbad
+NGC 4059  	 	181.0471	+20.4098	107.2	 9.75	 0.079	-25.41	   	206	 9.6	33.0	 18	 	            	Simbad
+NGC 4073  	 	181.1128	+01.8960	 91.5	 8.49	 0.074	-26.33	277	292	21.4	23.0	 10	B	            	Simbad
+NGC 4213  	 	183.9064	+23.9819	101.6	 9.61	 0.102	-25.44	259	264	11.6	33.6	  4	B	            	Simbad
+NGC 4472  	 	187.4450	+08.0004	 16.7	 5.40	 0.061	-25.72	289	   	53.9	    	205	B	=M49,Virgo  	Simbad
+NGC 4486  	 	187.7059	+12.3911	 16.7	 5.81	 0.063	-25.31	336	   	41.3	48.7	205	 	=M87,Virgo  	Simbad
+NGC 4555  	 	188.9216	+26.5230	103.6	 9.17	 0.044	-25.92	350	319	10.1	29.8	  1	 	            	Simbad
+NGC 4649  	 	190.9167	+11.5526	 16.5	 5.74	 0.072	-25.36	340	   	39.8	44.1	205	 	=M60,Virgo  	Simbad
+NGC 4816  	 	194.0506	+27.7455	102.0	 9.71	 0.024	-25.33	244	   	14.5	50.6	 49	 	Coma/A1656  	Simbad
+NGC 4839  	 	194.3515	+27.4977	102.0	 9.20	 0.028	-25.85	285	269	20.8	29.2	 49	 	Coma/A1656  	Simbad
+NGC 4874  	 	194.8988	+27.9594	102.0	 8.86	 0.025	-26.18	279	266	23.8	32.0	 49	 	Coma/A1656  	Simbad
+NGC 4889  	 	195.0338	+27.9770	102.0	 8.41	 0.026	-26.64	401	370	19.1	33.0	 49	B	Coma/A1656  	Simbad
+NGC 4914  	 	195.1789	+37.3153	 74.5	 8.65	 0.037	-25.72	225	   	12.8	31.3	  1	 	=NGC 4912   	Simbad
+NGC 5129  	 	201.0417	+13.9765	107.5	 9.25	 0.078	-25.92	277	262	12.3	21.8	  1	 	            	Simbad
+NGC 5208  	 	203.1163	+07.3166	105.0	 9.51	 0.097	-25.61	   	252	 6.8	18.3	  3	B	            	Simbad
+PGC 047776	 	203.4770	+03.2836	103.8	 9.73	 0.076	-25.36	   	   	 7.9	13.2	  9	B	            	Simbad
+NGC 5252  	 	204.5661	+04.5426	103.8	 9.77	 0.095	-25.32	196	   	 9.3	19.8	  9	 	            	Simbad
+NGC 5322  	 	207.3133	+60.1904	 34.2	 7.16	 0.038	-25.51	236	   	26.6	20.1	  8	B	            	Simbad
+NGC 5353  	 	208.3613	+40.2831	 41.1	 7.63	 0.035	-25.45	290	   	14.2	27.8	 12	B	            	Simbad
+NGC 5490  	 	212.4888	+17.5455	 78.6	 8.92	 0.073	-25.57	288	   	10.1	19.5	  1	 	            	Simbad
+NGC 5557  	 	214.6071	+36.4936	 51.0	 8.08	 0.016	-25.46	281	   	16.2	14.7	  4	B	            	Simbad
+IC 1143   	 	232.7345	+82.4558	 97.3	 9.51	 0.172	-25.45	   	   	 9.2	    	  3	B	            	Simbad
+UGC 10097 	 	238.9303	+47.8673	 91.5	 9.38	 0.049	-25.43	302	   	 7.6	17.2	  7	B	            	Simbad
+NGC 6223  	 	250.7679	+61.5789	 86.7	 9.11	 0.100	-25.59	   	   	10.6	    	  4	B	            	Simbad
+NGC 6364  	 	261.1139	+29.3902	105.3	 9.74	 0.106	-25.38	205	   	 7.7	11.5	  1	 	            	Simbad
+NGC 6375  	 	262.3411	+16.2067	 95.8	 9.42	 0.334	-25.53	220	   	10.8	    	  1	 	            	Simbad
+UGC 10918 	 	264.3892	+11.1217	100.2	 9.31	 0.498	-25.75	   	   	12.8	    	  1	 	            	Simbad
+NGC 6442  	 	266.7139	+20.7611	 98.0	 9.59	 0.239	-25.40	240	   	 9.1	    	  1	 	            	Simbad
+NGC 6482  	 	267.9534	+23.0719	 61.4	 8.37	 0.277	-25.60	322	   	10.1	    	  3	B	            	Simbad
+NGC 6575  	 	272.7395	+31.1162	106.0	 9.56	 0.172	-25.58	306	   	 9.0	    	  1	 	            	Simbad
+NGC 7052  	 	319.6377	+26.4469	 69.3	 8.58	 0.337	-25.67	284	   	14.7	    	  1	 	            	Simbad
+NGC 7242  	 	333.9146	+37.2987	 84.4	 8.33	 0.415	-26.34	   	   	27.7	    	 15	B	            	Simbad
+NGC 7265  	 	335.6145	+36.2098	 82.8	 8.69	 0.325	-25.93	258	   	16.0	    	 21	B	            	Simbad
+NGC 7274  	 	336.0462	+36.1259	 82.8	 9.24	 0.295	-25.39	298	   	12.6	    	 21	 	            	Simbad
+NGC 7386  	 	342.5089	+11.6987	 99.1	 9.42	 0.200	-25.58	   	   	11.6	38.1	  3	B	            	Simbad
+NGC 7426  	 	344.0119	+36.3614	 80.0	 8.82	 0.337	-25.74	   	   	11.2	    	  4	B	            	Simbad
+NGC 7436  	 	344.4897	+26.1500	106.6	 9.01	 0.250	-26.16	352	   	19.1	25.0	  8	B	            	Simbad
+NGC 7550  	 	348.8170	+18.9614	 72.7	 8.91	 0.375	-25.43	255	   	12.4	28.0	  3	B	            	Simbad
+NGC 7556  	 	348.9353	-02.3815	103.0	 9.25	 0.097	-25.83	268	   	16.9	26.4	  4	B	            	Simbad
+NGC 7618  	 	349.9468	+42.8526	 76.3	 9.04	 0.609	-25.44	298	   	 9.8	    	 10	B	            	Simbad
+NGC 7619  	 	350.0605	+08.2063	 54.0	 8.03	 0.224	-25.65	324	   	14.8	34.6	 12	B	            	Simbad
+NGC 7626  	 	350.1772	+08.2170	 54.0	 8.03	 0.197	-25.65	274	   	20.1	26.7	 12	 	            	Simbad
+NGC 7681  	 	352.2287	+17.3096	 96.8	 9.22	 0.149	-25.72	359	   	11.4	 5.5	  1	 	            	Simbad
+
